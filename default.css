@@ -1,0 +1,151 @@
+/*
+
+   ## 1. Hel Brand Colors
+   ## 2. Elements
+   ## 3. Typography
+   ## 4. Waves
+
+*/
+
+
+
+/* 1.       HEL BRAND COLORS */
+:root {
+
+        /* 
+           Spåra //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Spora:#009246;
+        --Spora-light-20:#CCE9DA;
+        --Spora-light-50:#80C8A2;
+        --Spora-dark-50:#007438;
+
+        /* 
+           Kupari //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Kupari:#00D7A7;
+        --Kupari-light-20:#CCF7ED;
+        --Kupari-light-50:#80EBD3;
+        --Kupari-dark-50:#01B78E;
+
+        /* 
+           Sumu //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Sumu:#9FC9EB;
+        --Sumu-light-20:#EBF4FB;
+        --Sumu-light-50:#CFE4F5;
+        --Sumu-dark-50:#78A4C7;
+
+        /* 
+           Vaakuna //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Vaakuna:#0072C6;
+        --Vaakuna-light-20:#CCE2F3;
+        --Vaakuna-light-50:#80B8E2;
+        --Vaakuna-dark-50:#005B9E;
+
+        /* 
+           Bussi //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Bussi:#0000BF;
+        --Bussi-light-20:#CCCCF2;
+        --Bussi-light-50:#7F7FDF;
+        --Bussi-dark-50:#000098;
+
+        /* 
+           Suomenlinna //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Suomenlinna:#F5A3C7;
+        --Suomenlinna-light-20:#FDECF3;
+        --Suomenlinna-light-50:#FAD1E3;
+        --Suomenlinna-dark-50:#DE7BA6;
+
+        /* 
+           Tilli //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Tilli:#BD2719;
+        --Tilli-light-20:#F1D3D1;
+        --Tilli-light-50:#DE938C;
+        --Tilli-dark-50:#99160A;
+
+        /* 
+           Metro //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Metro:#FD4F00;
+        --Metro-light-20:#FEDBCC;
+        --Metro-light-50:#FEA780;
+        --Metro-dark-50:#CA3F00;
+
+        /* 
+           Metro //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Kesa:#FFC61E;
+        --Kesa-light-20:#FFF3D2;
+        --Kesa-light-50:#FFE28E;
+        --Kesa-dark-50:#E2AB0A;
+
+        /* 
+           Engel //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Engel:#FFE977;
+        --Engel-light-20:#FFFAE3;
+        --Engel-light-50:#FFF4BB;
+        --Engel-dark-50:#F5DA4E;
+
+        /* 
+           Kulta //####// Main color // Light:20% // Light:50% // Dark:50%
+        */
+        --Kulta:#C2A251;
+        --Kulta-light-20:#F2ECDC;
+        --Kulta-light-50:#E0D0A8;
+        --Kulta-dark-50:#977B34;
+
+        /* 
+           PERUSVÄRIT //####// Musta // Hopea // Valkoinen
+        */
+        --Musta:#000000;
+        --Hopea:#DEDFE1;
+        --Valkoinen:#FFFFFF;
+
+        /* 
+           UI Helper colors //####// Error # Error Light:20% // Success # Success Light:20% // Alert # Alert:Light 20% # Alert Dark:50% // Info # Info Light:20%
+        */
+        --Error:#C4123E;
+        --Error-light-20:#F6E2E6;
+
+        --Success:#007A64;
+        --Success-light-20:#E2F5F3;
+
+        --Alert:#FFDA07;
+        --Alert-light-20:#FFF4B4;
+        --Alert-dark-50:#986700;
+
+        --Info:#007293;
+        --Info-light-20:#DCF1F5;
+        
+        --UI-grey: #F6F6F8;
+        /* 
+           Gray Shades for UI Components //####// Lighter <--> Darker
+        */
+        --Black-5:#F1F1F1;
+        --Black-10:#E5E5E5;
+        --Black-20:#CCCCCC;
+        --Black-30:#B2B2B2;
+        --Black-40:#999898;
+        --Black-42:#949494;
+        --Black-50:#808080;
+        --Black-54:#757575;
+        --Black-60:#666666;
+        --Black-70:#4C4C4C;
+        --Black-80:#333333;
+        --Black-90:#1A1A1A;
+}
+
+/* 3.       ELEMENTS */
+
+
+
+/* 3.       TYPOGRAPHY */
+
+
+

@@ -1,0 +1,1777 @@
+* {
+    --splash-height: 500px;
+    --width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75rem;
+
+}
+
+
+a {
+    color: var(--Musta);
+    text-decoration: none;
+    /* no underline */
+}
+
+/* TODO: needs to be changed later on and make normal <a></a> links blue and setup menus with different colors. */
+a.inline {
+    color: var(--Bussi);
+    text-decoration: underline;
+}
+
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 16px;
+    font-size: 2.5rem;
+}
+
+.wrapper {
+    width: var(--width);
+    max-width: 1440px;
+    background-color: var(--Valkoinen);
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: var(--splash-height);
+    width: var(--width);
+    margin: 0px 0px 50px 0px;
+}
+
+/* if header doesn't have underlying picture, this should be applied */
+.container.no-header-image {
+    height: 280px;
+    margin: 20px 0px;
+}
+
+
+.wideImage {
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    height: var(--splash-height);
+    min-width: 1440px;
+
+}
+
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wavecontainer {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+    height: 28px;
+    bottom: 28px;
+}
+
+
+.blueSVGColour {
+    filter: invert(91%) sepia(11%) saturate(1467%) hue-rotate(103deg) brightness(99%) contrast(86%);
+}
+
+.lightGreySVGcolour {
+    filter: invert(92%) sepia(3%) saturate(91%) hue-rotate(203deg) brightness(107%) contrast(96%);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Basic stuff */
+.wavemotif-loader {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 25px 0;
+    content: "ss";
+}
+
+/* Colors for wave motifs */
+.waveKupari {
+    background-color: var(--Kupari-light-50);
+}
+
+.waveUIGREY {
+    background-color: var(--UI-grey);
+}
+
+.waveSuomenlinna {
+    background-color: var(--Suomenlinna-light-50);
+}
+
+.waveEngel {
+    background-color: var(--Engel-light-50);
+}
+
+/* Wave motifs */
+.waveTyrsky {
+    -webkit-mask-image: url("waves/tyrsky.svg");
+    mask-image: url("waves/tyrsky.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+.Upsidedown {
+    transform: rotate(180deg);
+}
+
+.waveVarina {
+    -webkit-mask-image: url("waves/varina.svg");
+    mask-image: url("waves/varina.svg");
+    height: 10px;
+}
+
+.waveSyke {
+    -webkit-mask-image: url("waves/syke.svg");
+    mask-image: url("waves/syke.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 95px;
+}
+
+.waveSykeUpsidedown {
+    transform: rotate(180deg);
+    -webkit-mask-image: url("waves/syke.svg");
+    mask-image: url("waves/syke.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 95px;
+    margin-bottom: 100px;
+}
+
+.wavePulssi {
+    -webkit-mask-image: url("waves/pulssi.svg");
+    mask-image: url("waves/pulssi.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    bottom: 50px;
+}
+
+.wavePerus {
+    -webkit-mask-image: url("waves/perus.svg");
+    mask-image: url("waves/perus.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    bottom: 25px;
+
+}
+
+.wavePerusUpsidedown {
+    transform: rotate(180deg);
+    -webkit-mask-image: url("waves/perus.svg");
+    mask-image: url("waves/perus.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    height: 250px;
+}
+
+
+.waveTyyni {
+    -webkit-mask-image: url("waves/tyyni.svg");
+    mask-image: url("waves/tyyni.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    bottom: 25px;
+}
+
+/* Blockquote */
+
+
+/* Blockquote stylized */
+blockquote p {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: var(--Musta);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Spawning the "Quote mark" */
+blockquote p:before {
+    display: flex;
+    flex-grow: 1;
+    content: '“';
+    padding: 0 15px;
+    margin: 0px;
+    font-size: 120px;
+    color: var(--Kupari-light-50);
+}
+
+/* Title for quote */
+blockquote header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 1rem;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Cited person */
+blockquote footer cite {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 0rem;
+    margin: 0rem;
+    font-weight: bold;
+    font-style: normal;
+    padding: 0 110px;
+
+}
+
+/* Job title */
+blockquote footer span {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 1.6rem 0;
+    padding: 0 110px;
+
+}
+
+/* Navigation bar */
+
+.navigation {
+    display: grid;
+    grid-template-columns: 110px 1fr 100px 110px 200px 1fr 2fr 50px;
+
+    grid-template-rows: auto;
+    grid-template-areas:
+        "helsinkiLogo NewCo Palvelut Tapahtumat Oppaita Tietoa searchIcon langDropdown"
+        ". . Palvelut-content . Oppaita-content Tietoa-content . langDropdown-content";
+    grid-gap: 0 10px;
+    justify-content: center;
+    align-content: flex-end;
+    white-space: nowrap;
+}
+
+.dropdown-content {
+    height: 0px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#NewCo {
+    grid-area: NewCo;
+    align-self: center;
+}
+
+#Palvelut {
+    grid-area: Palvelut;
+    align-self: center;
+
+}
+
+#Palvelut-content {
+    grid-area: Palvelut-content;
+}
+
+
+#Tapahtumat {
+    align-self: center;
+    top: 50px;
+    grid-area: Tapahtumat
+}
+
+#Oppaita {
+    align-self: center;
+    grid-area: Oppaita;
+}
+
+#Oppaita-content {
+    grid-area: Oppaita-content;
+}
+
+#Tietoa {
+    align-self: center;
+    grid-area: Tietoa;
+}
+
+#Tietoa-content {
+    grid-area: Tietoa-content;
+}
+
+#searchIcon {
+    grid-area: searchIcon;
+    justify-self: end;
+    align-self: center;
+}
+
+#langDropdown {
+    align-self: center;
+    grid-area: langDropdown;
+}
+
+#langDropdown-content {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    grid-area: langDropdown-content;
+}
+
+.navigation>p,
+a {
+    font-size: 1.2rem;
+
+}
+
+.helsinkiLogo {
+    grid-area: helsinkiLogo;
+    width: 100px;
+    margin: 10px;
+
+}
+
+
+.navItem {
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+}
+
+
+.navigation>.dropbtn {
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: white;
+    z-index: 2;
+    font-weight: bold;
+}
+
+
+.dropbtn>img {
+    position: relative;
+    top: 7px;
+    right: 3px;
+}
+
+.dropdownLink {
+    margin: 10px 0px;
+}
+
+.dropdownLink>a,
+span {
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 2rem;
+}
+
+.dropdownLink>span {
+    color: gray;
+}
+
+.dropdown-content>a {
+    font-size: 0.9rem;
+    line-height: 2rem;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+    font-weight: bold;
+}
+
+.active {
+    opacity: 1;
+    display: block;
+    height: 250px;
+}
+/* Header image with diagonal swirl */
+
+.headerWithDiagnalLine {
+    height: var(--splash-height);
+    width: var(--width);
+}
+
+
+.diagonal-overlay {
+    position: absolute;
+    height: var(--splash-height);
+    right: 10%;
+    width: 100%;
+}
+
+.diagonal-overlay-mobile {
+    display: none;
+    height: 400px;
+    top: 300px;
+}
+
+.HeaderText {
+    margin: 50px;
+    position: absolute;
+    margin-top: 10%;
+    left: 5%;
+    min-width: 300px;
+    width: 500px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.HeaderText>h1 {
+    margin-bottom: 20px;
+
+}
+
+/* Header image with downwards wave patern */
+
+.pageTitleText {
+    margin: 50px;
+    position: absolute;
+    margin-top: 75px;
+    left: 5%;
+    min-width: 300px;
+    width: 500px;
+    line-height: 5rem;
+}
+
+.pageTitleText>h1 {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+}
+
+/* Singular News Article */
+h4.dividerDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 0rem;
+    padding: 4rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+h5.dividerDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 0rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+img.newsImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 4rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    width: 70%;
+
+}
+
+
+.contentNews {
+    width: 100%;
+    text-align: center;
+    margin: 36px auto;
+}
+
+.contentNews .innerContentNews {
+    width: 50%;
+    text-align: center;
+    margin: 36px auto;
+    text-align: left;
+}
+
+.contentNews .innerContentNews>p {
+    padding: 0 0 4%;
+}
+
+/* More news section */
+img.smallerNewsImg {
+    width: 100%;
+    height: 50%;
+}
+
+div.mNews {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+div.mNewsCenter {
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 100px 0 50px;
+    font-size: 1.2rem;
+
+}
+
+.mNewsText {
+    padding: 40px;
+    background: var(--Valkoinen);
+}
+
+.mNewsDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem;
+    padding: 0 0 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-size: 15px;
+}
+
+.mNewsReadMore:first-letter {
+    text-transform: capitalize;
+}
+
+.mNewsReadMore a.inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem;
+    padding: 2rem 0 0.2rem;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.mNewsMain {
+    padding: 100px 50px 100px 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+ul.personelInfo>li {
+    list-style-type: none;
+}
+
+ul.personelInfo li.name {
+    font-weight: bold;
+}
+
+.Button {
+    margin: 20px;
+    padding: 15px;
+    color: var(--Bussi);
+    border: 2px solid var(--Bussi);
+}
+
+.Button>a {
+    color: var(--Bussi);
+}
+
+/* Yhteystiedot profile cards */
+
+h4.dividerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 0rem;
+    padding: 4rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--UI-grey);
+}
+
+img.profilePicture {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+}
+
+div.personel {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.personelText {
+    padding: 40px;
+}
+
+.personelMain {
+    padding: 50px 50px 200px 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+ul.personelInfo>li {
+    list-style-type: none;
+}
+
+ul.personelInfo li.name {
+    font-weight: bold;
+}
+
+/* Yhteystiedot profile cards */
+
+h4.dividerTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.9rem;
+    margin: 0rem;
+    padding: 4rem 0 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--UI-grey);
+}
+img.profilePicture {
+    border-radius: 50%;
+    width:15rem;
+    height:15rem;
+}
+div.personel {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+.personelText {
+    padding: 40px;
+}
+.personelMain {
+    padding: 50px 50px 200px 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+ul.personelInfo > li {
+    list-style-type: none;
+}
+ul.personelInfo li.name {
+    font-weight:bold;
+}
+
+/* Content Cards */
+
+.contentText {
+    width: 55%;
+    text-align: center;
+    margin: 36px auto;
+}
+
+.filterButtons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.filterButton {
+    width: 300px;
+    border: 2px solid blue;
+    color: blue;
+    padding: 10px 20px;
+    margin: 40px auto;
+}
+
+.filterButton:hover,
+.filterButton:active {
+    border: 2px solid blue;
+    color: white;
+    background-color: blue;
+}
+
+
+.contentCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Card {
+    background-color: rgb(240, 238, 238);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 333px;
+    height: 430px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.Card>hr {
+    width: 50%;
+    margin: 0 auto;
+    color: var(--Kupari-light-50);
+}
+
+.cardIcon {
+    height: 50px;
+}
+
+.readMore>a {
+    position: relative;
+    color: var(--Bussi);
+}
+
+.cardArrow {
+    margin: 0 5px;
+    color: var(--Bussi);
+    filter: invert(30%) sepia(55%) saturate(7412%) hue-rotate(230deg) brightness(96%) contrast(91%);
+}
+
+.seeAllButton {
+    margin: 50px auto;
+    text-align: center;
+    min-width: 250px;
+    padding: 10px;
+    background-color: var(--Bussi);
+    width: 30%;
+    color: white;
+}
+
+/* Palvelut Content card */
+
+.palvelut-headline {
+    font-weight: bold;
+}
+
+.palvelu-filter {
+    border: solid 2px var(--Bussi);
+    padding: 15px;
+    margin: 20px;
+    color: var(--Bussi);
+}
+
+#loadMoreEvents {
+    border: solid 2px var(--Bussi);
+    padding: 15px;
+    margin: 20px;
+    color: var(--Bussi);
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+#loadMoreNews {
+    border: solid 2px var(--Bussi);
+    padding: 15px;
+    margin: 20px;
+    color: var(--Bussi);
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.palvelu-filter-selected {
+    background: var(--Bussi);
+    color: white;
+}
+
+.contentText {
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+    margin: 36px auto;
+}
+
+.palvelurajaus {
+    display: flex;
+    margin: 0 5px;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.palvelu-filter {
+    padding: 8px;
+
+}
+
+/* NewsCards */
+.newsContainer {
+    background-color: var(--UI-grey);
+    padding: 50px;
+}
+
+.newsCards {
+    padding: 20px 0 50px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+.News {
+    background-color: rgb(255, 255, 255);
+    max-width: 333px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.newsPhoto {
+    width: 100%;
+    height: 225px;
+}
+
+.newsText {
+    padding: 40px;
+}
+
+/* guideDownloads */
+
+.guideTitle {
+    background-color: var(--UI-grey);
+    text-align: center;
+    padding: 50px;
+}
+
+.guideDownloads {
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+.Guide {
+    background-color: rgb(255, 255, 255);
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.guidePhoto {
+    width: 100%;
+    height: 225px;
+}
+
+.guideText {
+    padding: 40px;
+}
+
+.downloadGuideButton {
+    margin: 20px;
+    padding: 15px;
+    color: var(--Bussi);
+    border: 2px solid var(--Bussi);
+}
+
+.downloadGuideButton>a {
+    color: var(--Bussi);
+}
+
+/* VideoSection */
+
+.videoTitle {
+    background-color: var(--UI-grey);
+    text-align: center;
+    padding: 50px;
+}
+
+.videoList {
+    padding: 30px 0px 75px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+.Video {
+    background-color: rgb(255, 255, 255);
+    max-width: 333px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.videoPhoto {
+    width: 100%;
+    height: 225px;
+}
+
+.videoText {
+    padding: 40px;
+}
+
+/* Statistics */
+
+.statisticbox {
+    background-color: var(--UI-grey);
+    width: 100%;
+    padding: 50px;
+}
+
+.statisticTitle {
+    text-align: center;
+}
+
+.Statistics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+
+}
+
+.statistic {
+    width: 234px;
+    height: 200px;
+    margin: 50px;
+    text-align: center;
+}
+
+.statistic {
+    width: 234px;
+    height: 200px;
+    margin: 75px;
+}
+
+/* eventstyles.css */
+
+.Eventtext {
+    flex-direction: column;
+    height: 250px;
+    text-align: center;
+}
+
+.Eventtext p {
+    max-width: 500px;
+    align-self: center;
+    font-size: 1.25rem;
+}
+
+.EventContainer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    width: var(--width);
+
+}
+
+.EventCategories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+
+}
+.EventCards {
+
+    display: flex;
+    flex-direction: column;
+
+}
+.EventCard {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr / 2fr;
+    min-width: 400px;
+    max-width: 800px;
+    height: 200px;
+    margin: 10px auto;
+    padding: 40px 40px 40px 20px;
+}
+
+.EventCard a {
+    justify-self: end;
+    padding-right: 4rem;
+}
+
+.Cardcontent {
+    place-self: start start;
+    padding-right: 4rem;
+}
+
+.Cardcontent h4,p {
+    text-align: start;
+}
+
+.datetime {
+    grid-row: span 2;
+    place-self: start center;
+    text-align: start;
+}
+
+.readMore {
+    place-self: end start;
+}
+
+.readMore>.dropbtn {
+    font-size: 0.9rem;
+}
+
+.seeAllButton2 {
+    margin: 1rem;
+    text-align: center;
+    padding: 10px 15px 10px 15px;
+    background-color: transparent;
+    border: 2px solid var(--Bussi);
+    color: var(--Bussi);
+    min-height: 56px;
+    flex-basis: 48px auto;
+    flex-grow: 100px;
+    font-weight: bold;
+}
+
+#moreEvents {
+    align-self: center;
+    flex: auto;
+}
+
+/* END eventstyles.css */
+
+/* Events */
+
+.eventcontainer {
+    background-color: var(--UI-grey);
+    height: var(--splash-height);
+    width: var(--width);
+}
+
+.eventCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event {
+    display: flex;
+    padding: 40px;
+    width: 70%;
+    background-color: white;
+    flex-wrap: nowrap;
+}
+
+.event > div {
+    margin: 20px;
+}
+.event > .address {
+    min-width: 200px;
+}
+
+/* VideoSection */
+
+.videoTitle {
+    background-color: var(--UI-grey);
+    text-align: center;
+    padding: 50px;
+}
+
+.videoList {
+    padding: 30px 0px 75px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--UI-grey);
+}
+
+.Video {
+    background-color: rgb(255, 255, 255);
+    max-width: 333px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 10px 10px;
+    font-size: 1.2rem;
+}
+
+.videoPhoto {
+    width: 100%;
+    height: 225px;
+}
+
+.videoText {
+    padding: 40px;
+}
+
+
+/* Wide image with Text box on the right */
+
+.overlayImageLeft {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: absolute;
+    left: 5%;
+    height: 400px;
+    width: 500px;
+    background-color: var(--Kupari-light-50);
+    padding: 30px;
+    font-size: 1.2rem;
+    top: 50px;
+
+}
+
+
+/* Square image with Text box on the left */
+
+.overlayImageRight {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    left: 20%;
+    padding: 36px;
+    height: 400px;
+    width: 500px;
+    background-color: var(--Suomenlinna-light-50);
+    font-size: 1.1rem;
+}
+
+.eventsButton {
+    padding: 10px;
+    border: 2px solid #1a1a1a;
+    margin-top: auto;
+    width: 60%;
+}
+
+.squareImageLeft {
+    position: absolute;
+    left: 5%;
+    height: var(--splash-height);
+    width: 700px;
+
+}
+
+/* Square image with Text box on the Right */
+
+/* .overlayImageRight {
+    element already defined
+} */
+
+
+.eventsButton {
+    padding: 10px;
+    border: 2px solid var(--Black-80);
+    margin-top: auto;
+    width: 60%;
+}
+
+.squareImageRight {
+    position: absolute;
+    margin-left: 10%;
+    height: var(--splash-height);
+    width: 700px;
+}
+
+/* Quote carousel */
+
+.quoteCarousel {
+
+    text-align: center;
+    height: 400px;
+    border: none;
+    margin: 8%;
+}
+
+.quoteCarousel > header {
+    font-size: 1.5rem;
+}
+
+.quoteCarousel > blockquote {
+    min-width: 400px;
+    display: flex;
+}
+
+.quoteCarousel > blockquote > p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.quoteImage {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.quoteArrow {
+    height: 100px;
+}
+
+/* Email Subscription box */
+
+.emailSubscription {
+    display: block;
+    margin-bottom: 60px;
+}
+
+.squareImage60 {
+    position: absolute;
+    width: 1000px;
+    height: 500px;
+}
+
+.subscriptionBox {
+    position: relative;
+    display: flex;
+    left: 60%;
+    flex-direction: column;
+    background-color: var(--Engel-light-50);
+    padding: 30px;
+    width: 500px;
+    height: 500px;
+}
+
+.subscriptionBox>h3 {
+    font-size: 3rem;
+}
+
+.subscriptionBox>p {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.subscriptionBox>form>input {
+    margin: 10px;
+    border: 2px solid var(--Musta);
+}
+
+#emailInput {
+    height: 2.5rem;
+    width: 60%;
+}
+
+/* Wide newsletter box*/
+
+.emailSubscriptionWide {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: white;
+}
+
+.subscriptionBoxWide {
+    position: relative;
+    background-color: var(--Engel-light-50);
+    padding: 40px;
+    width: 80%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 2fr;
+    grid-gap: 10px;
+}
+.gridImg {
+    grid-column: 1 / 2;
+}
+
+.gridFirst {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+}
+.tilaaHeader {
+    font-size: 2rem;
+}
+
+.gridSecond {
+    grid-column: 3 / 4;
+
+}
+
+#emailInput {
+    height: 3.5rem;
+    width: 50%;
+    margin: 0;
+}
+
+#yrittäjyydestäCheckbox {
+    border: 2px solid #1a1a1a;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+#tapahtumistaCheckbox {
+    border: 2px solid #1a1a1a;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    margin-left: 0;
+}
+
+.demon {
+    display: flex;
+    position: absolute;
+    right: 60px;
+    top: 68px;
+}
+
+.submitButton {
+    font-size: 1rem;
+    text-align: center;
+    text-justify: center;
+    padding: 15px;
+    border: 2px solid #1a1a1a;
+    background-color: var(--engel);
+    width: 100%;
+    height: 3.5rem;
+    float: right;
+}
+
+/* Palvelut2 pages stylings below */
+
+.ajanvaraus {
+    margin: 20px;
+    padding-bottom: 100px;
+}
+
+.varaus-link {
+    border: solid 2px var(--bussi);
+    padding: 20px;
+    color: white;
+    background-color: var(--bussi);
+}
+
+.timestableContainer {
+    background-color: var(--UI-grey);
+    padding: 60px;
+}
+
+.timestableContainer >h4 {
+   font-weight: normal;
+   text-align: center;
+   letter-spacing: 1px;
+   font-size: 20px;
+}
+
+.timestable {
+    margin: 50px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 2fr;
+    
+}
+.imgContainer{
+    justify-items: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+}
+.imgContainer >img {
+    float: right;
+}
+.timesContainer {
+    padding-bottom: 50px;
+}
+
+.infonJälkeen {
+    margin: 50px auto;
+    width: 60%;
+    text-align: left;
+    margin: 36px auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.infonJälkeen >h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.englishSection {
+    margin: 50px auto;
+    width: 60%;
+    text-align: left;
+    margin: 36px auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+.englishSection >h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Big images 2  */
+
+
+.overlayImage4 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    left: 10%;
+    padding: 36px;
+    height: 400px;
+    width: 30%;
+    background-color: var(--Suomenlinna-light-50);
+    font-size: 1.1rem;
+}
+
+/* map */
+
+.mapcontainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    background-color: var(--UI-grey);
+    margin-bottom: 0px;
+    height: var(--splash-height);
+    width: var(--width);
+}
+
+.textOverlayLeft>p {
+    margin-bottom: 20px;
+}
+
+.mapTextOverlay {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    width: 30%;
+}
+
+.map {
+    border: 20px solid white;
+    background-color: var(--UI-grey);
+    position: absolute;
+    top: 50px;
+    right: 5%;
+    height: 400px;
+    width: 50%;
+}
+
+/* footer */
+.footer {
+    background-color: var(--Kupari-light-50);
+    padding: 0rem;
+}
+
+.FooterWithoutMap {
+    margin-top: 200px;
+    background-color: var(--Kupari-light-50);
+    padding: 0rem;
+}
+
+.footerbox {
+    text-align: center;
+    position: relative;
+    bottom: 50%;
+}
+
+.footerbox>hr {
+    width: 90%;
+    text-align: right;
+    margin-left: 5%
+}
+
+.footerText {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.helsinkiLogoFooter {
+    width: 150px;
+}
+
+.footerBox {
+    line-height: 2.1rem;
+}
+
+.footerBox>img {
+    margin: 0.2rem;
+}
+
+.svgIcon {
+    width: 2rem;
+}
+
+.copyRight {
+    font-size: 0.85rem;
+    margin: 10px 5% 0 5%;
+}
+
+@media only screen and (max-width: 1130px) {
+
+    .navigation {
+        margin: 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr minmax(200px, 3fr) 2fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "helsinkiLogo NewCo . searchIcon langDropdown"
+            "Palvelut Tapahtumat Oppaita Tietoa langDropdown-content"
+            "Palvelut-content . Oppaita-content Tietoa-content .";
+        justify-items: center;
+    }
+
+    .navItem {
+        margin: 0px;
+    }
+
+
+    .subscriptionBox {
+        left: 50%;
+    }
+
+    .quoteCarousel {
+        height: 850px;
+        width: 90%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .quoteArrow {
+        display: none;
+    }
+    .mapcontainer {
+        height: 600px;
+    }
+
+    /* footer */
+
+    .footerbox {
+        bottom: 30%;
+    }
+
+}
+
+@media only screen and (max-width: 720px) {
+    .container {
+        margin-bottom: 0px;
+        height: 750px;
+    }
+    .navigation {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "helsinkiLogo NewCo  "
+            "Palvelut ."
+            "Palvelut-content ."
+            "Tapahtumat ."
+            "Oppaita ."
+            "Oppaita-content ."
+            "Tietoa ."
+            "Tietoa-content .";
+        justify-items: left;
+        text-align: center;
+        align-content: left;
+        margin-left: 20px;
+    }
+
+    .dropdown-content {
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        /* background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1; */
+    }
+
+
+    #searchIcon {
+        display: none;
+    }
+
+    #langDropdown {
+        display: none;
+    }
+
+    #langDropdown-content {
+        display: none;
+    }
+
+    /* Header Image */
+
+    .diagonal-overlay-mobile {
+        display: inline;
+    }
+    .diagonal-overlay {
+        display: none;
+    }
+
+    .HeaderText {
+        top: 50%;
+        left: 0;
+        min-width: 200px;
+        width: 80%;
+    }
+
+    /* Content Cards */
+
+    .seeAllButton {
+        width: 80%;
+    }
+
+    /* Overlay images */
+    
+    .overlayImageRight {
+        top: 200px;
+        left: 5%;
+        width: 500px;
+    }
+
+    .overlayImageLeft {
+        top: 200px;
+        left: 0;
+        right: 0;
+        width: 90%;
+    }
+
+    .squareImageLeft{
+        left:0;
+    }
+    /* Quote Carousel */ 
+    .quoteCarousel {
+        height: 850px;
+        width: 90%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    .quoteCarousel > blockquote {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quoteArrow {
+        display: none;
+    }
+
+    /* email subscription */ 
+
+    .emailSubscription {
+        margin-bottom: 50px;
+    }
+
+    /* map */ 
+
+    .mapcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 850px;
+    }
+
+    .mapTextOverlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+    }
+    
+    .map {
+        text-align: center;
+        border: 20px solid white;
+        background-color: var(--UI-grey);
+        position: relative;
+        top: 0;
+        right: 0;
+        height: 400px;
+        width: 90%;
+    }
+    /* Footer */
+
+    .footerText {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* guideDownloads */
+
+    .contentText {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .guideDownloads {
+        padding: 0px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: var(--UI-grey);
+    }
+}
