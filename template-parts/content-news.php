@@ -139,14 +139,6 @@
 <?php else: ?>
 	<?php // no layouts found ?>
 <?php endif; ?>
-
-
-<h1>Singular news page content ends here</h1>
-
-
-
-
-
         <div class="wavemotif-loader waveUIGREY waveSyke"></div>
 
         <div>

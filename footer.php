@@ -16,6 +16,20 @@
 
 
 <?php wp_footer(); ?>
+<div style="bottom: 0px;" class="wavemotif-loader waveUIGREY wavePerus"></div>
+        <div class="mapcontainer">
+            <div class="mapTextOverlay">
+                <h2>Miten löydät perille</h2>
+                <p>ewrhenvwerv wneru ehkrfbwejhrf eb erihw ei</p>
+                <h4>Liikenneyhteydet</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                <p>Aspernatur fugit odio dolor reiciendis, consectetur cumque in minus ea velit</p>
+                <p>esse ratione non possimus vitae eligendi numquam culpa repellendus libero quo.</p>
+            </div>
+            <div class="map">
+                <h1>Map will go here</h1>
+            </div>
+        </div>
 <!-- footer -->
 <footer class="footer">
             <div class="wavemotif-loader waveKupari wavePerus"></div>
