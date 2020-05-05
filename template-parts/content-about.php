@@ -14,7 +14,7 @@
                 <h1><?php echo esc_html($title); ?></h1>
             <?php endif; ?>
             <?php if ( $description = get_sub_field('description') ): ?>
-                <p style="text-align: center;"><?php echo esc_html($description); ?></p>
+                <p><?php echo esc_html($description); ?></p>
             <?php endif; ?>
         </div>
 		<?php elseif ( get_row_layout() == 'stuff_layout' ) : ?>
