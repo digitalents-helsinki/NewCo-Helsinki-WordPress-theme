@@ -1,6 +1,7 @@
 <?php
 /**
- * The template for displaying event archives.
+ * Template Name: test123 template
+ *
  *
  * Override this template by copying it to yourtheme/archive-event.php
  *

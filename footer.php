@@ -27,10 +27,12 @@
                 <p>esse ratione non possimus vitae eligendi numquam culpa repellendus libero quo.</p>
             </div>
             <div class="map">
-                <h1>Map will go here</h1>
+                <<iframe width="auto" height="auto" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJn5Tf-c0LkkYRpLgZa2E7IbE&key=..." allowfullscreen></iframe>
             </div>
         </div>
 <!-- footer -->
+
 <footer class="footer">
             <div class="wavemotif-loader waveKupari wavePerus"></div>
             <div class="footerText">
@@ -42,7 +44,7 @@
 					<?php if ( $description = get_field('description', 'options') ): ?>
 						<span><?php echo $description; ?></span>
 					<?php endif; ?>
-                </div>
+				</div>				
 
 
 

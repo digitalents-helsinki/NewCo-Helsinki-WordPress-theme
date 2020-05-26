@@ -17,8 +17,7 @@
 			<?php if ( $description = get_sub_field('description') ): ?>
                 <p><?php echo esc_html($description); ?></p>
             <?php endif; ?>
-            </div>
-            
+            </div>            
 		<?php elseif ( get_row_layout() == 'statistics_box' ) : ?>
         <div class="wavemotif-loader waveUIGREY waveTyrsky"></div>
         <div class="statisticbox">

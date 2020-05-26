@@ -108,22 +108,28 @@ get_header();
 		<?php elseif ( get_row_layout() == 'news_cards' ) : ?>
 			
 
-            
-            <div style="background: yellow; margin: 50px;" class="newsCards">
-                <script type="text/javascript">
-                    <?php 
-                    $news = get_sub_field("load_news_from_category");
+            <div class="wavemotif-loader waveUIGREY waveSyke"></div>
+            <div>
+            <?php if ( $section_title = get_sub_field('section_title') ): ?>
+                <h4 class="guideTitle"><?php echo esc_html($section_title); ?></h4>
+            <?php endif; ?>
+                <div class="newsCards">
+                    <script type="text/javascript">
+                        <?php 
+                        $news = get_sub_field("load_news_from_category");
 
-                    foreach ($news as $newsCat) {
+                        foreach ($news as $newsCat) {
+                            ?>
+                                thisNewsCategory = <?php echo "'" . $newsCat->name . "'"; ?>;
+                                getFilteredNews(thisNewsCategory);
+                            <?php
+
+                        }
                         ?>
-                            thisNewsCategory = <?php echo "'" . $newsCat->name . "'"; ?>;
-                            getFilteredNews(thisNewsCategory);
-                        <?php
-
-                    }
-                    ?>
-                </script>
+                    </script>
+                </div>
             </div>
+            <div class="wavemotif-loader waveUIGREY waveSykeUpsidedown"></div>
 
 
 

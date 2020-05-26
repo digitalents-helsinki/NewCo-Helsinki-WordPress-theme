@@ -155,6 +155,26 @@
 
 
 		<?php elseif ( get_row_layout() == 'email_subscriptionbox' ) : ?>
+        <!-- Email subscriptionBox -->
+        <div class="emailSubscription">
+            <img class="squareImage60" src="Images/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png" alt="Placeholder">
+            <div class="subscriptionBox">
+                <h3>Tilaa uutiskirje</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis excepturi odit mollitia, aperiam,
+                    expedita voluptatum hic sequi magnam reprehenderit eius nesciunt deserunt ab? Sit laboriosam a sint
+                    quis qui sequi.</p>
+                <p class="bold">Sähköpostiosoite</p>
+                <form action="Submit">
+                    <input type="text" name="email" id="emailInput">
+                    <br>
+                    <input name="_mc4wp_lists[]" type="checkbox" value="1324f6d5f6"> Yksinyrittäjät tiedotus englanti
+                    <br>
+                    <input name="_mc4wp_lists[]" type="checkbox" value="2b99f78ec3"> Maahanmuuttajat
+                    <input type="submit" value="Subscribe"<div class="eventsButton"></div>
+                </form>
+            </div>
+      
+        
 			<?php // warning: layout 'email_subscriptionbox' has no sub fields ?>
 		<?php elseif ( get_row_layout() == 'square_image_with_text_box_on_the_right' ) : ?>
             <!-- Square image with Text box on the right-->

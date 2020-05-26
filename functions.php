@@ -132,6 +132,9 @@ function newco_helsinki_scripts() {
 
 	wp_register_style( 'newco_helsinki-default', get_template_directory_uri() . '/default.css', array(), 1, 'all');
 	wp_enqueue_style('newco_helsinki-default');
+
+	wp_register_style( 'magnific-css', get_template_directory_uri() . '/css/magnific-popup.css', array(), 1, 'all');
+	wp_enqueue_style('magnific-css');
 	
 	wp_register_style( 'slick-css', get_template_directory_uri() . '/slick/slick.css', array(), 1, 'all');
 	wp_enqueue_style('slick-css');
@@ -156,7 +159,10 @@ function loadjs(){
 	wp_enqueue_script('jquery');
 
     wp_register_script('slickminjs' , get_stylesheet_directory_uri() . '/slick/slick.min.js', '', 1,false);
-    wp_enqueue_script('slickminjs');
+	wp_enqueue_script('slickminjs');
+	
+	wp_register_script('magnific' , get_stylesheet_directory_uri() . '/js/magnific-popup.js', '', 1,false);
+	wp_enqueue_script('magnific');
 }
 add_action('wp_enqueue_scripts', 'loadjs');
 
@@ -231,7 +237,8 @@ function getFilteredEvents() {
 			$startString = get_post_meta($event->ID)['_event_start_date'][0];
 	        $startDateAndTime = explode(" ", $startString);
 	        $startDate = implode(".", array_reverse(explode("-", $startDateAndTime[0])));
-	        $startTime = substr($startDateAndTime[1], 0, 5);
+			$startTime = substr($startDateAndTime[1], 0, 5);
+			
 
 	        echo "<div class='EventCard'>";
 	        echo    "<div class='datetime'>";
@@ -564,3 +571,11 @@ function custom_taxonomy() {
 
 }
 add_action( 'init', 'custom_taxonomy', 0 );
+
+//String
+add_action('init', function() {
+	pll_register_string('NewCo-helsinki_Read-more', 'Read more');
+	pll_register_string('NewCo-helsinki_Load-more', 'Load more');
+	pll_register_string('NewCo-helsinki_Event-info', 'Event info');
+	pll_register_string('NewCo-helsinki_Event-location', 'Event location');
+});

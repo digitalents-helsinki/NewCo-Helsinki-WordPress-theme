@@ -145,40 +145,54 @@
             <h4 class="guideTitle"><?php if ( $lisaa_uutisa_section_text = get_field('lisaa_uutisa_section_text') ): ?>
                                         <?php echo $lisaa_uutisa_section_text; ?>
                                     <?php endif; ?></h4>
-            <div class="NewsCategories">
-                
-            </div>
-            <div class="newsCards">
-                <script type="text/javascript">
-                    getFilteredNews(<?php echo "'" . get_the_terms(get_the_ID(), 'news_categories')[0]->name . "'"; ?>);
-                </script>
+            
+            <div class="mNewsMain">
+                <div class="newsCards">
+                    <script type="text/javascript">
+                        getFilteredNews(<?php echo "'" . get_the_terms(get_the_ID(), 'news_categories')[0]->name . "'"; ?>);
+                    </script>
+                    <?php
+                        /*$news = get_posts(array(
+                            'post_type' => 'news',
+                            'posts_per_page' => 12,
+                            "numberposts" => 12
+                        ));
+
+                        foreach ($news as $article) {
+                            echo "<div class='News'>";
+                                echo "<img class='newsPhoto' src='" . get_the_post_thumbnail_url($article->ID) . "' alt='placeholder icon' class='object-fit: cover'>";
+                                echo "<div class='newsText'>";
+                                    echo "<p>" . get_the_date('d.m.Y', $article->ID) . "</p>";
+                                    echo "<h4>" . $article->post_title . "</h4>";
+                                    echo "<p>" . wp_trim_words($article->post_content, 20) . "</p>";
+                                    echo "<div class='readMore'>";
+                                        echo "<a href='" . get_the_permalink($article->ID) . "' class='dropbtn'>Lue lisää";
+                                            echo "<img class="cardArrow" src="<?php echo get_stylesheet_directory_uri()?>/Icons/keyboard_arrow_right-24px.svg" alt="placeholder icon">";
+                                        echo "</a>";
+                                echo " </div>";
+                            echo " </div>";
+                            echo "</div>";
+                        }
+
+                        if ($news->found_posts >= 12) {
+                            echo "<a href='#'>1VIEW MORE</a>";
+                        }*/
+                    ?>
+                </div>
+                <!--- Link to news pages --->
                 <?php
-                    /*$news = get_posts(array(
-                        'post_type' => 'news',
-                        'posts_per_page' => 12,
-                        "numberposts" => 12
-                    ));
-
-                    foreach ($news as $article) {
-                        echo "<div class='News'>";
-                            echo "<img class='newsPhoto' src='" . get_the_post_thumbnail_url($article->ID) . "' alt='placeholder icon' class='object-fit: cover'>";
-                            echo "<div class='newsText'>";
-                                echo "<p>" . get_the_date('d.m.Y', $article->ID) . "</p>";
-                                echo "<h4>" . $article->post_title . "</h4>";
-                                echo "<p>" . wp_trim_words($article->post_content, 20) . "</p>";
-                                echo "<div class='readMore'>";
-                                    echo "<a href='" . get_the_permalink($article->ID) . "' class='dropbtn'>Lue lisää";
-                                        echo "<img class="cardArrow" src="<?php echo get_stylesheet_directory_uri()?>/Icons/keyboard_arrow_right-24px.svg" alt="placeholder icon">";
-                                    echo "</a>";
-                               echo " </div>";
-                           echo " </div>";
-                        echo "</div>";
-                    }
-
-                    if ($news->found_posts >= 12) {
-                        echo "<a href='#'>VIEW MORE</a>";
-                    }*/
-                ?>
+                $link = get_field('linkki_uutiset_sivulle');
+                if( $link ):
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self';
+                    ?>
+                    <div class="mNewsCenter">
+                                    <div class="Button">
+                    <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                    </div>
+                </div><?php endif; ?>
             </div>
         </div>
+        <div class="wavemotif-loader waveUIGREY waveSykeUpsidedown"></div>
     
